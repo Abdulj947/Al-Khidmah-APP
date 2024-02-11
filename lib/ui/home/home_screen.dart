@@ -18,7 +18,10 @@ class _HomeScreenDrawerItems {
   final String routePath;
   final URLType type;
 
-  const _HomeScreenDrawerItems(this.title, {required this.icon, required this.routePath, this.type = URLType.internal});
+  const _HomeScreenDrawerItems(this.title,
+      {required this.icon,
+      required this.routePath,
+      this.type = URLType.internal});
 }
 
 const String mosqueProjectURL = 'https://www.mcnd.ie/mosqueproject';
@@ -28,22 +31,29 @@ const String aboutUsURL = 'https://www.mcnd.ie/about';
 final _drawerItems = [
   const _HomeScreenDrawerItems('Home', icon: Icons.home, routePath: '/'),
   const _HomeScreenDrawerItems('Mosque Project',
-      icon: Icons.info_outline, routePath: mosqueProjectURL, type: URLType.external),
-  const _HomeScreenDrawerItems('Donate', icon: Icons.euro, routePath: donateURL, type: URLType.external),
-  const _HomeScreenDrawerItems('About Us', icon: Icons.info_outline, routePath: aboutUsURL, type: URLType.external),
-  _HomeScreenDrawerItems('Azan Settings', icon: Icons.settings, routePath: const SettingsScreenRoute().path),
-  _HomeScreenDrawerItems('Quarn Radio', icon: Icons.radio, routePath: const RadioScreenRoute().path),
+      icon: Icons.info_outline,
+      routePath: mosqueProjectURL,
+      type: URLType.external),
+  const _HomeScreenDrawerItems('Donate',
+      icon: Icons.euro, routePath: donateURL, type: URLType.external),
+  const _HomeScreenDrawerItems('About Us',
+      icon: Icons.info_outline, routePath: aboutUsURL, type: URLType.external),
+  _HomeScreenDrawerItems('Azan Settings',
+      icon: Icons.settings, routePath: const SettingsScreenRoute().path),
+  _HomeScreenDrawerItems('Quarn Radio',
+      icon: Icons.radio, routePath: const RadioScreenRoute().path),
 ];
 
 class HomeScreen extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final ValueNotifier<int> currentPage = useState(0);
-    final PageController pageController = usePageController(initialPage: currentPage.value);
+    final PageController pageController =
+        usePageController(initialPage: currentPage.value);
     return Scaffold(
       appBar: AppBar(
         title: const AutoSizeText(
-          'Muslim Community North Dublin',
+          'Al-Khidmah Community Centre',
           maxLines: 1,
           maxFontSize: 30,
           minFontSize: 15,

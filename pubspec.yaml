@@ -1,5 +1,5 @@
-name: mcnd_mobile
-description: MCND Mosque mobile app
+name: akcc_mobile
+description: AKCC Mosque mobile app
 
 publish_to: "none"
 
@@ -72,9 +72,9 @@ dependencies:
   shared_preferences: ^2.0.5
   cached_network_image: ^3.0.0
 
-  flutter_compass: ^0.6.0
+  flutter_compass: ^0.7.0
   flutter_qiblah: ^2.0.0
-  permission_handler: ^6.1.3
+  permission_handler: 6.0.1+1
 
   just_audio: ^0.7.4
   audio_service: ^0.17.0
@@ -82,6 +82,9 @@ dependencies:
 
   # url launcher (launch external url in default browser)
   url_launcher: ^6.0.3
+
+dependency_overrides:
+  chewie_audio: 1.2.0
 
 dev_dependencies:
   flutter_test:
